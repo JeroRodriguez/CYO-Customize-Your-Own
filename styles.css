@@ -52,34 +52,36 @@ header {
 }
 .navbar {
     display: flex;
-}
-.navbar a {
-    color: var(--text-color);
-    font-size: 1.1rem;
-    font-weight: 500;
-    padding: 5px 0;
-    margin: 0 20px;
-    transition: all .50s ease;
-}
-.navbar a.sales {
-    color: var(--sales-color);
-    font-size: 1.2rem;
-}  
-.navbar a.best-seller {
-    color: var(--bestSeller-color);
-    font-size: 1.2rem;
+
+    a {
+        color: var(--text-color);
+        font-size: 1.1rem;
+        font-weight: 500;
+        padding: 5px 0;
+        margin: 0 20px;
+        transition: all .50s ease;
+    }
+    a.sales {
+        color: var(--sales-color);
+        font-size: 1.2rem;
+    }  
+    a.best-seller {
+        color: var(--bestSeller-color);
+        font-size: 1.2rem;
+    }
 }
 .main-nav{
     display: flex;
     align-items: center;
-}
-.main-nav a {
-    color: var(--text-color);
-    margin-right: 14px;
-    margin-left: 5px;
-    font-size: 1.5rem;
-    transition: all .50s ease;
-    align-items: center;
+
+    a {
+        color: var(--text-color);
+        margin-right: 14px;
+        margin-left: 5px;
+        font-size: 1.5rem;
+        transition: all .50s ease;
+        align-items: center;
+    }
 }
 .favorites-btn i {
     margin-right: 15px;
@@ -110,54 +112,52 @@ main {
     margin-top: 5em;
     transition: all .50 ease;
 }
-.first-view-section div {
-    padding: .75em 0;
-}
-.first-view-section div a {
-    color: var(--header-color);
-}
-.first-view-section div a:hover {
-    text-decoration: underline;
-}
-.first-view-section .choose-bar,
-.first-view-section .new-bar {
+.new-choose-bar {
     background-color: var(--main-color);
     text-align: center;
+    padding: .75em 0;
+
+    a {
+        color: var(--header-color);
+        font-size: .9rem ;
+    }
+    a:hover {
+        text-decoration: underline;
+    }
 }
-.container-mayor-zapatos {
+.container-collage-shoes {
     position: relative;
     width: 100%;
-    height: 85vh;
+    height: 38vw;
+    padding: 4em 0;
 }
-h1 {
+.slogan-phrase {
     position: absolute;
     text-align: center;
     width: 35%;
     top: 35%;
     left: 50%;
     transform: translate(-50%, -50%);
-}
-.word-1 {
-    font-family: "Playfair Display", serif;
-    font-weight: 600;
-    font-size: 1.15em;
-    color: #f94144;
-}
-.word-2 { 
-    font-family: "Dancing Script", cursive;
-    font-weight: 100;
-    font-size: 1.25em;
-    color: #8390fa;
-}
-.word-3{
-    font-family: "Cinzel", serif;
-    font-weight: 600;
-    font-size: 1.15em;
-    color: #fac748;
+    font-size: clamp(.5em, 1.9vw, 5em);
+
+    .word-1 {
+        font-family: "Playfair Display", serif;
+        font-weight: 600;
+        color: #f94144;
+    }
+    .word-2 { 
+        font-family: "Dancing Script", cursive;
+        font-weight: 100;
+        color: #8390fa;
+    }
+    .word-3{
+        font-family: "Cinzel", serif;
+        font-weight: 600;
+        color: #fac748;
+    }
 }
 .container-logo-img {
     width: 12%;
-    min-width: 135px;
     top: 20%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -165,6 +165,7 @@ h1 {
 }
 .container-air-force {
     position: absolute;
+    top: 5%;
     width: 29%;
     left: 11%;
     transform: rotate(35.52deg);
@@ -198,14 +199,25 @@ h1 {
     transform: matrix(-0.97, 0.26, 0.26, 0.97, 0, 0);
 }
 .logo-img,
-.air-force-img,
-.new-balance-img,
-.forum-img,
-.jordan-img,
-.vomero-img {
+.shoe-img {
     width: 100%;
 }
-
+.container-all-shoes {
+    display: grid;
+    justify-content: flex-end;
+    width: 100%;
+    grid-gap: 3em;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 20vw);
+    border: 2px solid blue;
+}
+.container-each-shoe {
+    /* width: 300px;
+    height: 300px; */
+    display: flex;
+    justify-content: space-between;
+    border: 2px solid #000;
+}
 @media (max-width: 1280px) {
     header {
         padding: 12px 2%;;
@@ -217,6 +229,10 @@ h1 {
     }
     main {
         margin-top: 4em;
+        transition: .2s;
+    }
+    .new-choose-bar {
+        padding: .25em 0;
         transition: .2s;
     }
 }
