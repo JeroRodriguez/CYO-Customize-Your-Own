@@ -8,7 +8,8 @@
 :root{
     --bg-color: #EDF2F4;
     --text-color: #000;
-    --main-color: #EF233C;
+    --main-color: #8390fa;
+    --second-color: #272936;
     --header-color: #fff;
     --logo-color: #2B2D42;
     --bestSeller-color: #008000;
@@ -26,6 +27,8 @@
 body {
     background-color:  var(--bg-color);
 }
+
+/* Header */
 header {
     position: fixed;
     width: 100%;
@@ -44,10 +47,10 @@ header {
     color: var(--text-color);
     font-weight: 600;
     margin-left: 5rem;
-    transition: all .2s ease;
+    transition: all .3s ease;
 }
 .logo:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
     color: var(--text-color);
 }
 .navbar {
@@ -108,6 +111,8 @@ header a:hover{
     transform: scale(1.1);
     color: var(--hover-color);
 }
+
+/* First view page */
 main {
     margin-top: 5em;
     transition: all .50 ease;
@@ -119,7 +124,7 @@ main {
 
     a {
         color: var(--header-color);
-        font-size: .9rem ;
+        font-size: .9rem;
     }
     a:hover {
         text-decoration: underline;
@@ -166,7 +171,7 @@ main {
 .container-air-force {
     position: absolute;
     top: 5%;
-    width: 29%;
+    width: 28.5%;
     left: 11%;
     transform: rotate(35.52deg);
 }
@@ -179,8 +184,8 @@ main {
 }
 .container-forum {
     position: absolute;
-    width: 35%;
-    top: 30%;
+    width: 34%;
+    top: 32%;
     left: 32.5%;
     transform: rotate(-36.65deg);
 }
@@ -193,7 +198,7 @@ main {
 }
 .container-vomero {
     position: absolute;
-    width: 30%;
+    width: 29%;
     right: 20%;
     top: 35%;
     transform: matrix(-0.97, 0.26, 0.26, 0.97, 0, 0);
@@ -202,25 +207,135 @@ main {
 .shoe-img {
     width: 100%;
 }
+
+/* Sort, Filters part */
+.phrase-sort-filters {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    transition: all .3s ease;
+}
+.phrase-page-shoes {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: 60%;
+}
+.sort-filter-list {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1.5em;
+    width: 40%;
+    transition: all .3s ease;
+}
+.sort-filter-button {
+    border: 2px solid var(--main-color);
+    color: #000;
+    font-weight: 600;
+    align-self: flex-end;
+    padding: .75em 4em;
+    cursor: pointer;
+    border-radius: .25em;
+    transition: all .3s ease;
+}
+.sort-filter-button:hover {
+    background-color: var(--main-color);
+    color: #fff;
+}
+/* Div Sort, Filters */
+.container-list {
+    display: flex;
+    flex-direction: column;
+    gap: .1em;
+}
+.list {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    margin: 3.5em .1em;
+    padding: 1em 1.5em;
+    background-color: var(--second-color);
+    border-radius: .25em;
+    opacity: 0;
+}
+.show {
+    opacity: 1;
+}
+.anchoor-list {
+    color: #fff;
+    font-weight: 500;
+    transition: all .3s ease;
+}
+.anchoor-list:hover {
+    color: var(--hover-color);
+}
+
+/* Page shoes */
+.general-shoes-section {
+    align-items: center;
+    padding: 4em 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+/* Shoes */
 .container-all-shoes {
     display: grid;
-    justify-content: flex-end;
-    width: 100%;
-    grid-gap: 3em;
+    width: 80%;
+    min-width: 60vh;
+    grid-gap: 2em;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 20vw);
-    border: 2px solid blue;
+    transition: all .3s ease;
 }
 .container-each-shoe {
     /* width: 300px;
     height: 300px; */
     display: flex;
-    justify-content: space-between;
-    border: 2px solid #000;
+    flex-direction: column;
+    gap: 1.5em;
+    padding: 2em 1em;
+    text-align: left;
+    border: 2px solid var(--second-color);
+    border-radius: .25em;
+}
+.container-each-shoe-img {
+    align-self: center;
+    padding: 1em;
+    width: 90%;
+    border: solid 2px #008000;
+}
+.img-each-shoe {
+    width: 100%;
+}
+.information-shoe {
+    align-self: center;
+    align-items: flex-start;
+    width: 90%;
+}
+.container-wish-add {
+    display: flex;
+    justify-content: space-around;
+    align-self: center;
+    width: 90%;
+}
+.buttons-wish-add {
+    border: 2px solid var(--main-color);
+    color: #000;
+    font-weight: 600;
+    padding: .25em;
+    cursor: pointer;
+    text-align: center;
+    width: 40%;
+    border-radius: .25em;
+}
+.buttons-wish-add:hover {
+    background-color: var(--main-color);
+    color: #fff;
 }
 @media (max-width: 1280px) {
     header {
-        padding: 12px 2%;;
+        padding: 12px 2%;
         transition: .2s;
     }
     .navbar a {
@@ -267,5 +382,17 @@ main {
     }
     .cart-btn i {
         margin-right: 3rem;
+    }
+    .container-all-shoes {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .phrase-sort-filters {
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+    }
+    .sort-filter-list {
+        width: 100%;
+        justify-content: flex-start;
     }
 }
