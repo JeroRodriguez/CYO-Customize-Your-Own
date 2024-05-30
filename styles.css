@@ -206,6 +206,7 @@ main {
 .logo-img,
 .shoe-img {
     width: 100%;
+    filter: drop-shadow(25px 25px 25px rgba(0, 0, 0, 0.5));
 }
 
 /* Sort, Filters part */
