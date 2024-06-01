@@ -5,6 +5,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Dancing+Script:wght@400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 /* Colores */
+
+/* 8390fa 
+C9B1BD*/
 :root{
     --bg-color: #EDF2F4;
     --text-color: #000;
@@ -23,6 +26,7 @@
     font-family: "Poppins", sans-serif;
     text-decoration: none;
     list-style: none;
+    scroll-behavior: smooth;
 }
 body {
     background-color:  var(--bg-color);
@@ -34,7 +38,7 @@ header {
     width: 100%;
     top: 0;
     right: 0;
-    z-index: 1000;
+    z-index: 1002;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -144,6 +148,7 @@ main {
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: clamp(.5em, 1.9vw, 5em);
+    user-select: none;
 
     .word-1 {
         font-family: "Playfair Display", serif;
@@ -178,15 +183,15 @@ main {
 .container-new-balance {
     position: absolute;
     width: 30%;
-    top: 35%;
+    top: 39%;
     left: 8%;
     transform: rotate(10.8deg);
 }
 .container-forum {
     position: absolute;
-    width: 34%;
+    width: 28%;
     top: 32%;
-    left: 32.5%;
+    left: 35.5%;
     transform: rotate(-36.65deg);
 }
 .container-jordan {
@@ -200,13 +205,15 @@ main {
     position: absolute;
     width: 29%;
     right: 20%;
-    top: 35%;
+    top: 46%;
     transform: matrix(-0.97, 0.26, 0.26, 0.97, 0, 0);
 }
 .logo-img,
 .shoe-img {
     width: 100%;
-    filter: drop-shadow(25px 25px 25px rgba(0, 0, 0, 0.5));
+    filter: drop-shadow(25px 25px 25px rgba(0, 0, 0, 0.4));
+    user-select: none;
+    pointer-events: none;
 }
 
 /* Sort, Filters part */
@@ -253,14 +260,15 @@ main {
     position: absolute;
     display: flex;
     flex-direction: column;
+    align-self: center;
+    align-items: center;
+    width: 9%;
     margin: 3.5em .1em;
     padding: 1em 1.5em;
     background-color: var(--second-color);
     border-radius: .25em;
     opacity: 0;
-}
-.show {
-    opacity: 1;
+    z-index: 1000;
 }
 .anchoor-list {
     color: #fff;
@@ -269,6 +277,23 @@ main {
 }
 .anchoor-list:hover {
     color: var(--hover-color);
+}
+.filter-list-type {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.list-brand,
+.list-price {
+    margin: .5em 0;
+}
+.anchoor-list-type {
+    color: var(--hover-color);
+    font-weight: 300;
+    transition: all .3s ease;
+}
+.anchoor-list-type:hover {
+    color: #fff;
 }
 
 /* Page shoes */
@@ -294,7 +319,7 @@ main {
     height: 300px; */
     display: flex;
     flex-direction: column;
-    gap: 1.5em;
+    gap: 1em;
     padding: 2em 1em;
     text-align: left;
     border: 2px solid var(--second-color);
@@ -303,37 +328,99 @@ main {
 .container-each-shoe-img {
     align-self: center;
     padding: 1em;
+    height: 50%;
     width: 90%;
-    border: solid 2px #008000;
+    height: auto;
+    border: solid 2px var(--second-color);
+    border-radius: .25em;
+}
+.each-shoe-img-air {
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+    padding-top: 1.5em;
 }
 .img-each-shoe {
     width: 100%;
+    filter: drop-shadow(25px 25px 25px rgba(0, 0, 0, 0.15));
+    user-select: none;
+    pointer-events: none;
 }
 .information-shoe {
+    display: flex;
+    flex-direction: column;
     align-self: center;
-    align-items: flex-start;
+    height: 40%;
     width: 90%;
+    gap: .25em;
+}
+.information-shoe-price {
+    font-weight: 600;
+}
+.information-shoe-brand {
+    font-style: italic;
 }
 .container-wish-add {
     display: flex;
     justify-content: space-around;
     align-self: center;
     width: 90%;
+    height: 10%;
 }
 .buttons-wish-add {
     border: 2px solid var(--main-color);
-    color: #000;
+    background-color: var(--main-color);
+    color: #fff;
     font-weight: 600;
     padding: .25em;
     cursor: pointer;
     text-align: center;
     width: 40%;
     border-radius: .25em;
+    transition: all .3s ease;
 }
 .buttons-wish-add:hover {
-    background-color: var(--main-color);
-    color: #fff;
+    background-color: transparent;
+    color: #000;
 }
+/* SECCION (FOOTER) */
+footer {
+    background-color: var(--second-color);
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 2em;
+    gap: 1em;
+}
+.container-logo-img-footer{
+    width: 120px;
+    align-self: center;
+}
+.logo-img-footer {
+    width: 100%;
+    background-color: #fff;
+    border-radius: 100%;
+}
+.descripcion-footer {
+    text-align: center;
+    color: #fff;
+    font-size: clamp(1em, .95vw, 5em);
+    letter-spacing: .01em;
+}
+.copyright-footer {
+    text-align: center;
+    color: #fff;
+    font-size: .75em;
+    letter-spacing: .01em;
+}
+.enlace-footer {
+    color: #fff;
+    font-weight: 600;
+}
+#icono-footer {
+    font-size: 1em;
+    font-weight: 900;
+    margin-right: .3em;
+}
+
 @media (max-width: 1280px) {
     header {
         padding: 12px 2%;
@@ -396,4 +483,11 @@ main {
         width: 100%;
         justify-content: flex-start;
     }
+}
+
+.show {
+    opacity: 1;
+}
+.show-unDisplay {
+    display: none;
 }

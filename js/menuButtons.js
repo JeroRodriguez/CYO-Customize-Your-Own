@@ -8,27 +8,102 @@ menu.onclick = () => {
 }
 
 // Filter buttons 
-const sortButton = document.querySelector('.sort');
-const filterButton = document.querySelector('.filter');
+const sortBtn = document.querySelector('.sort');
+const filterBtn = document.querySelector('.filter');
 
-// Contenedores
-const listFilter = document.querySelector('.list-filter');
+const openListButtons = (e) => {
+    e.preventDefault();
+    
+    if(e.target.classList.contains('filter')) {
+        if(listFilter.classList.contains('show')) {
+                listFilter.classList.remove('show')
+            } else {
+                listFilter.classList.add('show')
+            }
+    } else if (e.target.classList.contains('sort')) {
+        if(listSort.classList.contains('show')) {
+                listSort.classList.remove('show')
+            } else {
+                listSort.classList.add('show')
+            }
+    }
+}
+
+// Sort
 const listSort = document.querySelector('.list-sort');
+sortBtn.addEventListener('click', openListButtons);
 
-filterButton.addEventListener('click', e => {
+// Function Sort
+function sortProducts(order) {
+    let products = Array.from(document.querySelectorAll('.container-all-shoes > .container-each-shoe'));
+    
+    products.sort((a, b) => {
+        let priceA = parseFloat(a.getAttribute('data-price'));
+        let priceB = parseFloat(b.getAttribute('data-price'));
+        
+        if (order === 'asc') {
+            return priceA - priceB; // Ordenar de menor a mayor
+        } else {
+            return priceB - priceA; // Ordenar de mayor a menor
+        }
+    });
+    
+    // Actualizar el DOM con los productos ordenados
+    let container = document.querySelector('.container-all-shoes');
+    container.innerHTML = ''; // Limpiar el contenedor
+    products.forEach(product => {
+        container.appendChild(product); // Añadir los productos ordenados
+    });
+}
+
+// Sort list buttons
+const btnLowToHigh = document.querySelector('.low-high');
+const btnHighToLow = document.querySelector('.high-low');
+
+// Eventos para ordenar de menor a mayor y viceversa
+btnLowToHigh.addEventListener('click', () => sortProducts('asc'));
+btnHighToLow.addEventListener('click', () => sortProducts('desc'));
+
+// Filter 
+const listFilter = document.querySelector('.list-filter');
+filterBtn.addEventListener('click', openListButtons);
+
+// Filter list buttons inside---Brand
+const btnBrand = document.querySelector('.brand');
+const listBrand = document.querySelector('.list-brand');
+
+btnBrand.addEventListener('click', e => {
     e.preventDefault();
-    if(listFilter.classList.contains('show')) {
-        listFilter.classList.remove('show')
+    if(listBrand.classList.contains('show-unDisplay')) {
+        listBrand.classList.remove('show-unDisplay')
     } else {
-        listFilter.classList.add('show')
+        listBrand.classList.add('show-unDisplay')
     }
 })
 
-sortButton.addEventListener('click', e => {
+// Event
+listBrand.addEventListener('click', (e) => {
     e.preventDefault();
-    if(listSort.classList.contains('show')) {
-        listSort.classList.remove('show')
-    } else {
-        listSort.classList.add('show')
-    }
+    let catProduct = e.target.getAttribute('category');
+
+    filterProducts(catProduct);
 })
+
+// Filter Function
+function filterProducts(category) {
+    let products = document.querySelectorAll('.container-all-shoes > .container-each-shoe');
+    
+    if (category === 'all') {
+        products.forEach(product => {
+            product.style.display = 'flex'; // Mostrar todos los productos
+        });
+    } else {
+        products.forEach(product => {
+            if (product.getAttribute('category') === category) {
+                product.style.display = 'flex'; // Mostrar productos de la categoría seleccionada
+            } else {
+                product.style.display = 'none'; // Ocultar productos de otras categorías
+            }
+        });
+    }
+}
