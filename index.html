@@ -22,11 +22,18 @@
             </ul>
 
             <div class="main-nav">
-                <a href="#" class="favorites-btn"><i class="bi bi-suit-heart"></i></a>
-                <a href="#" class="cart-btn"><i class="bi bi-bag"></i></a>
-                <a href="Views/Sign In/signIn.html" class="sign-in">Sign In</a>
-                <a href="Views/Register/register.html" class="register">Register</a>
-                <div class="bi bi-list" id="menu-icon"> </div>
+                <div class="container-btns-favorites-cart">
+                    <a href="#" class="favorites-btn"><i class="bi bi-suit-heart"></i></a>
+                    <div class="icon-cart">
+                        <a href="#" class="cart-btn"><i class="bi bi-bag"></i></a>
+                        <span>0</span>
+                    </div>
+                </div>
+                <div class="container-signIn-register">
+                    <a href="Views/Sign In/signIn.html" class="sign-in">Sign In</a>
+                    <a href="Views/Register/register.html" class="register">Register</a>
+                </div>
+                <div class="bi bi-list" id="menu-icon"></div>
             </div>
 
     </header>
@@ -72,156 +79,32 @@
                             <a href="" class="anchoor-list brand">Brand</a>
                             <div class="filter-list-type list-brand show-unDisplay">
                                 <a href="" class="anchoor-list-type adidas" category="all">All</a>
-                                <a href="" class="anchoor-list-type adidas" category="adidas">Adidas</a>
-                                <a href="" class="anchoor-list-type jordan" category="jordan">Jordan</a>
-                                <a href="" class="anchoor-list-type nike" category="nike">Nike</a>
-                                <a href="" class="anchoor-list-type newBalance" category="newBalance">New Balance</a>
-                                <a href="" class="anchoor-list-type puma" category="puma">Puma</a>
+                                <a href="" class="anchoor-list-type adidas" category="Adidas">Adidas</a>
+                                <a href="" class="anchoor-list-type jordan" category="Jordan">Jordan</a>
+                                <a href="" class="anchoor-list-type nike" category="Nike">Nike</a>
+                                <a href="" class="anchoor-list-type newBalance" category="New Balance">New Balance</a>
+                                <a href="" class="anchoor-list-type puma" category="Puma">Puma</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="container-all-shoes">
-                <div class="container-each-shoe" category="nike" data-price="120">
-                    <div class="container-each-shoe-img  each-shoe-img-air">
-                        <img src="img/Shoes/Air Force.png" alt="Air force one" class="img-each-shoe">
-                    </div>
-                    <div class="information-shoe">
-                        <p class="information-shoe-name">Air Force One</p>
-                        <p class="information-shoe-brand">Nike</p>
-                        <p class="information-shoe-price">$120</p>
-                    </div>
-                    <div class="container-wish-add">
-                        <a href="" class="buttons-wish-add wish">Wish</a>
-                        <a href="" class="buttons-wish-add add">Add to Cart</a>
-                    </div>
-                </div>
-
-                <div class="container-each-shoe" category="adidas" data-price="140">
-                    <div class="container-each-shoe-img">
-                        <img src="img/Shoes/Forum.png" alt="Forum" class="img-each-shoe">
-                    </div>
-                    <div class="information-shoe">
-                        <p class="information-shoe-name">Forum Mid</p>
-                        <p class="information-shoe-brand">Adidas</p>
-                        <p class="information-shoe-price">$140</p>
-                    </div>
-                    <div class="container-wish-add">
-                        <a href="" class="buttons-wish-add wish">Wish</a>
-                        <a href="" class="buttons-wish-add add">Add to Cart</a>
-                    </div>
-                </div>
-
-                <div class="container-each-shoe" category="nike" data-price="160">
-                    <div class="container-each-shoe-img">
-                        <img src="img/Shoes/Vomero.png" alt="Nike Vomero" class="img-each-shoe">
-                    </div>
-                    <div class="information-shoe">
-                        <p class="information-shoe-name">Vomero 5</p>
-                        <p class="information-shoe-brand">Nike</p>
-                        <p class="information-shoe-price">$160</p>
-                    </div>
-                    <div class="container-wish-add">
-                        <a href="" class="buttons-wish-add wish">Wish</a>
-                        <a href="" class="buttons-wish-add add">Add to Cart</a>
-                    </div>
-                </div>
-
-                <div class="container-each-shoe" category="newBalance" data-price="200">
-                    <div class="container-each-shoe-img">
-                        <img src="img/Shoes/NB.png" alt="New Balance" class="img-each-shoe">
-                    </div>
-                    <div class="information-shoe">
-                        <p class="information-shoe-name">993</p>
-                        <p class="information-shoe-brand">New Balance</p>
-                        <p class="information-shoe-price">$200</p>
-                    </div>
-                    <div class="container-wish-add">
-                        <a href="" class="buttons-wish-add wish">Wish</a>
-                        <a href="" class="buttons-wish-add add">Add to Cart</a>
-                    </div>
-                </div>
-
-                <div class="container-each-shoe" category="jordan" data-price="700">
-                    <div class="container-each-shoe-img">
-                        <img src="img/Shoes/Jordan 4.png" alt="Jordan 4" class="img-each-shoe">
-                    </div>
-                    <div class="information-shoe">
-                        <p class="information-shoe-name">Air Jordan 4 Retro</p>
-                        <p class="information-shoe-brand">Jordan</p>
-                        <p class="information-shoe-price">$700</p>
-                    </div>
-                    <div class="container-wish-add">
-                        <a href="" class="buttons-wish-add wish">Wish</a>
-                        <a href="" class="buttons-wish-add add">Add to Cart</a>
-                    </div>
-                </div>
-
-                <div class="container-each-shoe" category="nike" data-price="210">
-                    <div class="container-each-shoe-img">
-                        <img src="img/Shoes/Air max.png" alt="Nike Air Max" class="img-each-shoe">
-                    </div>
-                    <div class="information-shoe">
-                        <p class="information-shoe-name">Air Max 1</p>
-                        <p class="information-shoe-brand">Nike</p>
-                        <p class="information-shoe-price">$210</p>
-                    </div>
-                    <div class="container-wish-add">
-                        <a href="" class="buttons-wish-add wish">Wish</a>
-                        <a href="" class="buttons-wish-add add">Add to Cart</a>
-                    </div>
-                </div>
-
-                <div class="container-each-shoe" category="puma" data-price="110">
-                    <div class="container-each-shoe-img">
-                        <img src="img/Shoes/Clyde.png" alt="Clyde" class="img-each-shoe">
-                    </div>
-                    <div class="information-shoe">
-                        <p class="information-shoe-name">Clyde OG</p>
-                        <p class="information-shoe-brand">Puma</p>
-                        <p class="information-shoe-price">$110</p>
-                    </div>
-                    <div class="container-wish-add">
-                        <a href="" class="buttons-wish-add wish">Wish</a>
-                        <a href="" class="buttons-wish-add add">Add to Cart</a>
-                    </div>
-                </div>
-
-                <div class="container-each-shoe" category="jordan" data-price="250">
-                    <div class="container-each-shoe-img">
-                        <img src="img/Shoes/Jordan 1.png" alt="Jordan 1" class="img-each-shoe">
-                    </div>
-                    <div class="information-shoe">
-                        <p class="information-shoe-name">Air Jordan 1 Retro High</p>
-                        <p class="information-shoe-brand">Jordan</p>
-                        <p class="information-shoe-price">$250</p>
-                    </div>
-                    <div class="container-wish-add">
-                        <a href="" class="buttons-wish-add wish">Wish</a>
-                        <a href="" class="buttons-wish-add add">Add to Cart</a>
-                    </div>
-                </div>
-
-                <div class="container-each-shoe" category="adidas" data-price="150">
-                    <div class="container-each-shoe-img">
-                        <img src="img/Shoes/Samba.png" alt="Samba OG" class="img-each-shoe">
-                    </div>
-                    <div class="information-shoe">
-                        <p class="information-shoe-name">Samba OG</p>
-                        <p class="information-shoe-brand">Adidas</p>
-                        <p class="information-shoe-price">$150</p>
-                    </div>
-                    <div class="container-wish-add">
-                        <a href="" class="buttons-wish-add wish">Wish</a>
-                        <a href="" class="buttons-wish-add add">Add to Cart</a>
-                    </div>
-                </div>
-
-            </div>
+            <!-- List all shoes -->
+            <div class="container-all-shoes"></div>
         </section>
     </main>
+
+    <!-- Pag Cart -->
+    <div class="cartTab">
+        <h1>Shopping Cart</h1>
+        <div class="listCart"></div>
+
+        <div class="btnsCartTab">
+            <button class="close">Close</button>
+            <button class="checkOut">Check Out</button>
+        </div>
+    </div>
 
     <footer>
         <div class="container-logo-img-footer"><img src="img/OtherImg/logo.png" alt="Logo CYO" class="logo-img-footer"></div>
@@ -230,6 +113,6 @@
     </footer>
 
     <script src="js/menuButtons.js"></script>
-    <script src="js/main.js"></script>
+    <script src="js/cartTab.js"></script>
 </body>
 </html>

@@ -1,0 +1,65 @@
+[
+    {
+        "id": 1,
+        "name": "Air Force 1",
+        "brand": "Nike",
+        "price": 120,
+        "image": "img/Shoes/Air Force.png"
+    },
+    {
+        "id": 2,
+        "name": "Forum Mid",
+        "brand": "Adidas",
+        "price": 140,
+        "image": "img/Shoes/Forum.png"
+    },
+    {
+        "id": 3,
+        "name": "Vomero 5",
+        "brand": "Nike",
+        "price": 160,
+        "image": "img/Shoes/Vomero.png"
+    },
+    {
+        "id": 4,
+        "name": "993",
+        "brand": "New Balance",
+        "price": 200,
+        "image": "img/Shoes/NB.png"
+    },
+    {
+        "id": 5,
+        "name": "Air Jordan 4 Retro",
+        "brand": "Jordan",
+        "price": 200,
+        "image": "img/Shoes/Jordan 4.png"
+    },
+    {
+        "id": 6,
+        "name": "Air Max 1",
+        "brand": "Nike",
+        "price": 210,
+        "image": "img/Shoes/Air max.png"
+    },
+    {
+        "id": 7,
+        "name": "Clyde OG",
+        "brand": "Puma",
+        "price": 110,
+        "image": "img/Shoes/Clyde.png"
+    },
+    {
+        "id": 8,
+        "name": "Air Jordan 1 Retro High",
+        "brand": "Jordan",
+        "price": 250,
+        "image": "img/Shoes/Jordan 1.png"
+    },
+    {
+        "id": 9,
+        "name": "Samba OG",
+        "brand": "Adidas",
+        "price": 150,
+        "image": "img/Shoes/Samba.png"
+    }
+]
