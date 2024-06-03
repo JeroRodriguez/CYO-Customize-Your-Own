@@ -13,19 +13,11 @@ const filterBtn = document.querySelector('.filter');
 
 const openListButtons = (e) => {
     e.preventDefault();
-    
+
     if(e.target.classList.contains('filter')) {
-        if(listFilter.classList.contains('show')) {
-                listFilter.classList.remove('show')
-            } else {
-                listFilter.classList.add('show')
-            }
-    } else if (e.target.classList.contains('sort')) {
-        if(listSort.classList.contains('show')) {
-                listSort.classList.remove('show')
-            } else {
-                listSort.classList.add('show')
-            }
+        listFilter.classList.toggle('show')
+    } else {
+        listSort.classList.toggle('show');
     }
 }
 

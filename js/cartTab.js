@@ -29,17 +29,14 @@ const addDataToHTML = () => {
             newProduct.dataset.id = product.id;
             newProduct.innerHTML = `
             <div class="container-each-shoe-img">
-                <img src="${product.image}" alt="${product.name}" class="img-each-shoe">
+                <img src="${product.image}" alt="${product.name}" class="img-each-shoe"/>
             </div>
             <div class="information-shoe">
                 <p class="information-shoe-name">${product.name}</p>
                 <p class="information-shoe-brand">${product.brand}</p>
                 <p class="information-shoe-price">$${product.price}</p>
             </div>
-            <div class="container-wish-add">
-                <a href="" class="buttons-wish-add wish">Wish</a>
-                <a href="" class="buttons-wish-add add">Add to Cart</a>
-            </div>`;
+            <a href="" class="btn-add add">Add to Cart</a>`;
             listProductHTML.appendChild(newProduct);
         })
     }
@@ -50,7 +47,7 @@ listProductHTML.addEventListener('click', e => {
     let positionClick = e.target;
 
     if(positionClick.classList.contains('add')) {
-        positionClick = e.target.parentElement.parentElement;
+        positionClick = e.target.parentElement;
 
         let product_id = positionClick.dataset.id;
         addToCart(product_id);
@@ -93,7 +90,7 @@ const addCartToHTML = () => {
             let info = listProducts[positionProduct];
             newCart.innerHTML = `
                 <div class="img">
-                    <img src="${info.image}" alt="">
+                    <img src="${info.image}" alt="${info.name}">
                 </div>
                 <div class="name">
                     ${info.brand} ${info.name}
@@ -102,9 +99,9 @@ const addCartToHTML = () => {
                     $${info.price * cart.quantity}
                 </div>
                 <div class="quantity">
-                    <span class="minus"><</span>
+                    <span class="minus">-</span>
                     <span>${cart.quantity}</span>
-                    <span class="plus">></span>
+                    <span class="plus">+</span>
                 </div>
             `;
         listCartHTML.appendChild(newCart)
