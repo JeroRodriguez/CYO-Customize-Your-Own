@@ -646,7 +646,7 @@ footer {
     }
     .container-all-shoes {
         grid-template-columns: repeat(2, 1fr);
-        grid-gap: 1.5em;
+        grid-gap: 1em;
     }
     .main-nav{
         gap: 2em;
