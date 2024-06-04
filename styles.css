@@ -576,6 +576,7 @@ footer {
         gap: 1.5em;
     }
     .container-each-shoe {
+        padding: 1em;
         gap: .75rem;
     }
     .container-each-shoe-img {
