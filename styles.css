@@ -2,7 +2,8 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
 
 /* Tipografia */
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Dancing+Script:wght@400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Pacifico&display=swap');
 
 /* Colores */
 
@@ -51,7 +52,7 @@ header {
     color: var(--text-color);
     font-weight: 600;
     margin-left: 5rem;
-    transition: all .3s ease;
+    transition: all .2s;
 }
 .logo:hover {
     transform: scale(1.05);
@@ -61,7 +62,7 @@ header {
 
     a {
         color: var(--text-color);
-        font-size: 1.1rem;
+        font-size: clamp(1rem, 2vw, 1.2rem);
         font-weight: 500;
         padding: 5px 0;
         margin: 0 20px;
@@ -69,11 +70,11 @@ header {
     }
     a.sales {
         color: var(--sales-color);
-        font-size: 1.2rem;
+        font-size: clamp(1rem, 2vw, 1.2rem);
     }  
     a.best-seller {
         color: var(--bestSeller-color);
-        font-size: 1.2rem;
+        font-size: clamp(1rem, 2vw, 1.2rem);
     }
 }
 .main-nav{
@@ -103,7 +104,7 @@ header {
         top: 50%;
         right: -30%;
         cursor: pointer;
-        font-size: .8em;
+        font-size: 1rem;
     }
     a {
         color: var(--text-color);
@@ -214,7 +215,7 @@ main {
 
     a {
         color: var(--header-color);
-        font-size: .9rem;
+        font-size: clamp(.8rem, 2vw, 1rem);
     }
     a:hover {
         text-decoration: underline;
@@ -233,24 +234,23 @@ main {
     top: 35%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: clamp(.5em, 1.9vw, 5em);
+    font-size: clamp(1rem, 2vw, 5rem);
+    font-weight: 600;
     user-select: none;
-
-    .word-1 {
-        font-family: "Playfair Display", serif;
-        font-weight: 600;
-        color: #f94144;
-    }
-    .word-2 { 
-        font-family: "Dancing Script", cursive;
-        font-weight: 100;
-        color: #8390fa;
-    }
-    .word-3{
-        font-family: "Cinzel", serif;
-        font-weight: 600;
-        color: #fac748;
-    }
+    padding-top: .5em;
+    transition: all .1s;
+}
+.word-1 {
+    color: #8E44AD;
+    font-family: 'Fredoka One', cursive;
+}
+.word-2 {
+    color: #1ABC9C;
+    font-family: 'Pacifico', cursive;
+}
+.word-3{
+    color: #E74C3C;
+    font-family: 'Fredoka One', cursive;
 }
 .container-logo-img {
     width: 12%;
@@ -259,25 +259,26 @@ main {
     transform: translate(-50%, -50%);
     border-radius: 50%;
     position: absolute;
+    transition: all .3s ease;
 }
 .container-air-force {
     position: absolute;
     top: 2%;
     width: 26%;
-    left: 12%;
+    left: 11%;
     transform: matrix(-0.96, -0.5, -0.5, 0.96, 0, 0);
 }
 .container-new-balance {
     position: absolute;
     width: 30%;
-    top: 39%;
+    top: 40%;
     left: 8%;
     transform: rotate(10.8deg);
 }
 .container-forum {
     position: absolute;
     width: 28%;
-    top: 32%;
+    top: 34%;
     left: 35.5%;
     transform: rotate(-36.65deg);
 }
@@ -285,14 +286,14 @@ main {
     position: absolute;
     width: 30%;
     top: 5%;
-    right: 7.5%;
+    right: 7%;
     transform: rotate(20.03deg);
 }
 .container-vomero {
     position: absolute;
     width: 29%;
     right: 20%;
-    top: 46%;
+    top: 47%;
     transform: matrix(-0.97, 0.26, 0.26, 0.97, 0, 0);
 }
 .logo-img,
@@ -315,6 +316,15 @@ main {
     flex-direction: column;
     text-align: left;
     width: 60%;
+    transition: all .3s ease;
+}
+.title-page-shoes {
+    font-size: clamp(1.1rem, 3vw, 1.6rem);
+    transition: all .3s ease;
+}
+.description-page-shoes {
+    font-size: clamp(.8rem, 3vw, 1.2rem);
+    transition: all .3s ease;
 }
 .sort-filter-list {
     display: flex;
@@ -327,8 +337,11 @@ main {
     border: 2px solid var(--second-color);
     color: #000;
     font-weight: 600;
-    align-self: flex-end;
     padding: .75em 4em;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-size: clamp(.8rem, 2.75vw, 1rem);
     cursor: pointer;
     border-radius: .25em;
     transition: all .3s ease;
@@ -349,10 +362,12 @@ main {
     flex-direction: column;
     align-self: center;
     align-items: center;
-    width: 9%;
     margin: 3.5em .1em;
-    padding: 1em 1.5em;
+    padding: 1em .5em;
+    width: 22%;
+    max-width: 160px;
     background-color: var(--second-color);
+    font-size: clamp(.75rem, 2.5vw, 1rem);
     border-radius: .25em;
     opacity: 0;
     z-index: 1000;
@@ -401,14 +416,39 @@ main {
     transition: all .3s ease;
 }
 .container-each-shoe {
+    position: relative;
     display: flex;
     flex-direction: column;
-    gap: 1em;
+    gap: 1rem;
     padding: 2em 1em;
     text-align: left;
     border: 2px solid var(--second-color);
     border-radius: .25em;
     transition: all .3s ease;
+}
+.bestSellerTiquet {
+    position: absolute;
+    padding: .5em 3em;
+    right: -3em;
+    top: 2em;
+    color: #fff;
+    transform: rotate(40deg);
+    background-image: linear-gradient(50deg, transparent 0%, var(--bestSeller-color) 0% 85%, transparent 65%);
+    border-radius: 10px 5px;
+    transition: all .5s ease;
+    font-size: clamp(.8rem, 2.75vw, 1rem);
+}
+.saleTiquet {
+    position: absolute;
+    padding: .5em 3em;
+    right: -2em;
+    top: 1em;
+    color: #fff;
+    transform: rotate(40deg);
+    background-image: linear-gradient(50deg, transparent 0%, var(--sales-color) 0% 85%, transparent 65%);
+    border-radius: 10px 5px;
+    transition: all .5s ease;
+    font-size: clamp(.8rem, 2.75vw, 1rem);
 }
 .container-each-shoe-img {
     align-self: center;
@@ -430,12 +470,15 @@ main {
     height: 40%;
     width: 90%;
     gap: .25em;
+    font-size: clamp(.8rem, 2.75vw, 1rem);
 }
 .information-shoe-price {
     font-weight: 600;
+    font-size: clamp(.8rem, 2.75vw, 1rem);
 }
 .information-shoe-brand {
     font-style: italic;
+    font-size: clamp(.8rem, 2.75vw, 1rem);
 }
 .btn-add {
     border: 2px solid var(--second-color);
@@ -449,6 +492,7 @@ main {
     width: 60%;
     border-radius: .25em;
     transition: all .3s ease;
+    font-size: clamp(.8rem, 2.75vw, 1rem);
 }
 .btn-add:hover {
     background-color: var(--hover-color);
@@ -476,14 +520,15 @@ footer {
 .descripcion-footer {
     text-align: center;
     color: #fff;
-    font-size: clamp(1em, .95vw, 5em);
+    font-size: clamp(.9rem, 2vw, 1rem);
     letter-spacing: .01em;
     user-select: none;
+    font-weight: 700;
 }
 .copyright-footer {
     text-align: center;
     color: #fff;
-    font-size: .75em;
+    font-size: clamp(.75rem, 1.5vw, .8rem);
     letter-spacing: .01em;
     user-select: none;
 }
@@ -515,10 +560,18 @@ footer {
         transition: .2s;
     }
     .container-all-shoes {
-        width: 90%; 
+        width: 85%; 
     }
     .phrase-sort-filters {
-        width: 90%;
+        width: 85%;
+    }
+    .general-shoes-section {
+        align-items: center;
+        padding: 2em 0;
+        gap: 1.5em;
+    }
+    .container-each-shoe {
+        gap: .75rem;
     }
 }
 @media (max-width: 1090px) {
@@ -529,7 +582,7 @@ footer {
         position: absolute;
         top: 100%;
         right: -100%;
-        width: 270px;
+        width: 220px;
         background-color: var(--header-color);
         border: 2px solid var(--bg-color);
         display: flex;
@@ -537,6 +590,13 @@ footer {
         justify-content: flex-start;
         border-radius: 10px;
         transition: all .50s ease;
+    }
+    .slogan-phrase {
+        display: none;   
+    }
+    .container-logo-img {
+        width: 16%;
+        top: 24%;
     }
     .navbar a{
         display: block;
@@ -561,6 +621,9 @@ footer {
     }
     .main-nav{
         gap: 4em;
+    }
+    .container-each-shoe-img {
+        width: 95%;
     }
 }
 @media (max-width: 890px) {

@@ -1,5 +1,6 @@
 let iconCart = document.querySelector('.icon-cart');
 let closeCart = document.querySelector('.close');
+let checkOutCart = document.querySelector('.checkOut');
 let body = document.querySelector('body');
 let listProductHTML = document.querySelector('.container-all-shoes');
 let listCartHTML = document.querySelector('.listCart');
@@ -18,6 +19,17 @@ closeCart.addEventListener('click', (e) => {
     body.classList.toggle('showCart');
 })
 
+checkOutCart.addEventListener('click', (e) => {
+    e.preventDefault();
+    Swal.fire({
+        title: "Sorry but we don't have this feature yet... We are working on it!",
+        imageUrl: "img/OtherImg/logo.png",
+        imageWidth: 200,
+        imageHeight: 150,
+        imageAlt: "Logo Image"
+      });
+})
+
 const addDataToHTML = () => {
     listProductHTML.innerHTML = '';
     if(listProducts.length > 0) {
@@ -27,6 +39,7 @@ const addDataToHTML = () => {
             newProduct.setAttribute("data-price", `${product.price}`);
             newProduct.setAttribute("category", `${product.brand}`);
             newProduct.dataset.id = product.id;
+
             newProduct.innerHTML = `
             <div class="container-each-shoe-img">
                 <img src="${product.image}" alt="${product.name}" class="img-each-shoe"/>
@@ -37,6 +50,29 @@ const addDataToHTML = () => {
                 <p class="information-shoe-price">$${product.price}</p>
             </div>
             <a href="" class="btn-add add">Add to Cart</a>`;
+
+            function bestSellerTiquet() {
+                let tiquet = document.createElement('div');
+                tiquet.classList.add('bestSellerTiquet');
+                tiquet.textContent = 'Best Seller'
+                newProduct.appendChild(tiquet);
+            }
+            function saleTiquet() {
+                let tiquet = document.createElement('div');
+                tiquet.classList.add('saleTiquet');
+                tiquet.textContent = 'Sale'
+                newProduct.appendChild(tiquet);
+            }
+
+            if(product.type == 'Best Seller'){
+                const bestSellerBtn = document.querySelector('.best-seller');
+                bestSellerBtn.addEventListener('click', bestSellerTiquet);
+            } 
+            if(product.type == 'Sale') {
+                const saleBtn = document.querySelector('.sales');
+                saleBtn.addEventListener('click', saleTiquet);
+            }
+
             listProductHTML.appendChild(newProduct);
         })
     }
