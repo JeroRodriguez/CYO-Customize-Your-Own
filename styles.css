@@ -462,6 +462,7 @@ main {
 .img-each-shoe {
     width: 100%;
     filter: drop-shadow(25px 25px 25px rgba(0, 0, 0, 0.15));
+    min-width: 120px;
 }
 .information-shoe {
     display: flex;
@@ -547,6 +548,9 @@ footer {
         padding: 12px 2%;
         transition: .2s;
     }
+    .logo {
+        margin-left: 3rem;
+    }
     .navbar a {
         padding: 5px 0;
         margin: 0px 20px;
@@ -573,6 +577,9 @@ footer {
     .container-each-shoe {
         gap: .75rem;
     }
+    .container-each-shoe-img {
+        padding: 1em;
+    }
 }
 @media (max-width: 1090px) {
     #menu-icon {
@@ -590,6 +597,9 @@ footer {
         justify-content: flex-start;
         border-radius: 10px;
         transition: all .50s ease;
+    }
+    .logo {
+        margin-left: 2rem;
     }
     .slogan-phrase {
         display: none;   
@@ -627,6 +637,9 @@ footer {
     }
 }
 @media (max-width: 890px) {
+    .logo {
+        margin-left: 1rem;
+    }
     .container-all-shoes {
         grid-template-columns: repeat(2, 1fr);
         grid-gap: 1.5em;

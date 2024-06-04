@@ -8,14 +8,9 @@
 
 /* Colores */
 :root{
-    --bg-color: #dfced7;
     --text-color: #000;
-    --main-color: #C9B1BD;
-    --header-color: #f0f0f0;
+    --header-color: #fff;
     --logo-color: #2B2D42;
-    --bestSeller-color: #008000;
-    --sales-color: #D90429;
-    --hover-color: #8D99AE;
 }
 * {
     box-sizing: border-box;
@@ -29,11 +24,6 @@ body {
     background-image: url(../../img/OtherImg/bg.jpg);
     background-size: cover;
     background-position: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
 }
 header {
     position: fixed;
@@ -62,8 +52,8 @@ main {
 }
 
  /* Form */
-.container {
-    background-color: white;
+ .container {
+    background-color: #fff;
     padding: 20px;
     border-radius: 1em; 
     width: 20%;
@@ -71,7 +61,8 @@ main {
     display: flex;
     flex-direction: column;
     gap: 2em;
-    margin-top: 4em;
+    margin: 0 auto;
+    margin-top: 8em;
 }
 .container-logo-img {
     height: 50%;
