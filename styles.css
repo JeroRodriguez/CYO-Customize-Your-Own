@@ -315,7 +315,7 @@ main {
     display: flex;
     flex-direction: column;
     text-align: left;
-    width: 60%;
+    width: 80%;
     transition: all .3s ease;
 }
 .title-page-shoes {
@@ -366,8 +366,9 @@ main {
     padding: 1em .5em;
     width: 22%;
     max-width: 160px;
+    min-width: 120px;
     background-color: var(--second-color);
-    font-size: clamp(.75rem, 2.5vw, 1rem);
+    font-size: clamp(.8rem, 2.5vw, 1rem);
     border-radius: .25em;
     opacity: 0;
     z-index: 1000;
@@ -454,6 +455,7 @@ main {
     align-self: center;
     padding: 1em 2em;
     width: 90%;
+    min-width: 120px;
     border: solid 2px var(--second-color);
     border-radius: .25em;
     user-select: none;
@@ -462,7 +464,6 @@ main {
 .img-each-shoe {
     width: 100%;
     filter: drop-shadow(25px 25px 25px rgba(0, 0, 0, 0.15));
-    min-width: 120px;
 }
 .information-shoe {
     display: flex;
@@ -624,6 +625,9 @@ footer {
         display: flex;
         flex-direction: column;
         gap: 1em;
+    }
+    .phrase-page-shoes {
+        width: 70%;
     }
     .sort-filter-list {
         width: 100%;
